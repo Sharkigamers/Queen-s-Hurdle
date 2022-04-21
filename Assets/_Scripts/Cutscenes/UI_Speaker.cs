@@ -12,12 +12,7 @@ public class UI_Speaker : MonoBehaviour
     private TextWriter.TextWriterSingle textWriterSingle;
     [SerializeField] private GameObject movingTriangle;
     private int currentMessage = 0;
-    private string[] messageArray = new string[] {
-        "Hey there !",
-        "This is a test messsage",
-        "I hope this is working fine",
-        "If it does, you should be able to read this",
-    };
+    [SerializeField] private string[] messageArray = new string[] {""};
 
     private void Awake() {
         messageText = transform.Find("message").Find("messageText").GetComponent<TextMeshProUGUI>();
