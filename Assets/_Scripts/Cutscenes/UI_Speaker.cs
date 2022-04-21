@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using CodeMonkey.Utils;
 
 public class UI_Speaker : MonoBehaviour
 {
@@ -17,7 +16,7 @@ public class UI_Speaker : MonoBehaviour
     private void Awake() {
         messageText = transform.Find("message").Find("messageText").GetComponent<TextMeshProUGUI>();
 
-        transform.Find("message").GetComponent<Button_UI>().ClickFunc = () => {
+        transform.Find("message").GetComponent<UI_Button>().ClickFunc = () => {
             if (textWriterSingle != null && textWriterSingle.IsActive()) {
                 //Currently active TextWriter
                 textWriterSingle.WriteAllAndDestroy();
