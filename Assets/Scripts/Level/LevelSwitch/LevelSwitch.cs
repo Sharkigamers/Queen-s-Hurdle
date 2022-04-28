@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class LevelSwitch : MonoBehaviour
 {
-    public string nexLevel;
+    public string nextLevel;
     [SerializeField] LevelLoader levelLoader;
 
     private void OnTriggerEnter(Collider other) {
         if (other.CompareTag("Player"))
-            levelLoader.LoadSpecificLevel(nexLevel);
+            levelLoader.LoadSpecificLevel(nextLevel);
     }
 
     private void OnDrawGizmos() {
