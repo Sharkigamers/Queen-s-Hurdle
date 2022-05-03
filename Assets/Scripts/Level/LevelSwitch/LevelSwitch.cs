@@ -8,8 +8,9 @@ public class LevelSwitch : MonoBehaviour
     LevelLoader levelLoader;
 
     private void OnTriggerEnter(Collider other) {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player")) {
             levelLoader.LoadSpecificLevel(nextLevel);
+        }
     }
 
     public void setNextLevelName(string newNextLevel) {
