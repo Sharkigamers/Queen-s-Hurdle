@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 5943998300541254652}
   - component: {fileID: 5935242437091681200}
   - component: {fileID: 5911813505317748190}
-  - component: {fileID: 5911813505317748189}
   m_Layer: 0
   m_Name: Tower
   m_TagString: Untagged
@@ -35,7 +34,7 @@ Transform:
   - {fileID: 5916044868101531086}
   - {fileID: 7723883281816922706}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: -90.005005, z: 0}
 --- !u!33 &5943998300541254652
 MeshFilter:
@@ -107,19 +106,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &5911813505317748189
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5913012690473467926}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eba9f742fd8ffde448718fbed057c143, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  levelName: 
 --- !u!1001 &5911813506925269748
 PrefabInstance:
   m_ObjectHideFlags: 0

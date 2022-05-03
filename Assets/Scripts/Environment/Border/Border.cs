@@ -1,24 +1,12 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class LevelSwitch : MonoBehaviour
+public class Border : MonoBehaviour
 {
-    [SerializeField]
-    private string nextLevel;
-    [SerializeField]
-    LevelLoader levelLoader;
-
-    private void OnTriggerEnter(Collider other) {
-        if (other.CompareTag("Player"))
-            levelLoader.LoadSpecificLevel(nextLevel);
-    }
-
-    public void setNextLevelName(string newNextLevel) {
-        nextLevel = newNextLevel;
-    }
-
     private void OnDrawGizmos()
     {
-        Color color = new Color(0f, 1f, 0f, 0.5f);
+        Color color = new Color(1f, 0f, 0f, 0.5f);
         BoxCollider boxCollider = GetComponent<BoxCollider>();
         DrawBoxCollider(color, boxCollider);
     }
