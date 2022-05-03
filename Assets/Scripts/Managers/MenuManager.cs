@@ -23,16 +23,21 @@ public class IslandData {
     public GameObject island;
     public float waitTowerAppearTime = 1;
     public GameObject tower;
+    public List<GameObject> nextLevelBorderList;
 }
 
 public class MenuManager : MonoBehaviour
 {
     public List<IslandData> islandDataList;
 
+    private void Awake() {
+        _LoadIslandData();
+        _HideUnloadedIsland();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        _LoadIslandData();
         _AnimateUnlockedIslandList();
     }
 
@@ -51,6 +56,23 @@ public class MenuManager : MonoBehaviour
         }
     }
 
+    private void _HideUnloadedIsland() {
+        for (int i = 0; i < islandDataList.Count; ++i) {
+            if (!islandDataList[i].data.isUnlocked || !islandDataList[i].data.isAlreadyAnimated) {
+                islandDataList[i].island.SetActive(false);
+                islandDataList[i].tower.SetActive(false);
+            }
+            if (i + 1 < islandDataList.Count && !islandDataList[i + 1].data.isUnlocked)
+                _setNextLevelBorderActive(i);
+                
+        }
+    }
+
+    private void _setNextLevelBorderActive(int i) {
+        for (int j = 0; j < islandDataList[i].nextLevelBorderList.Count; ++j)
+            islandDataList[i].nextLevelBorderList[j].SetActive(true);
+    }
+
     private void _AnimateUnlockedIslandList() {
         StartCoroutine(_Appear());
     }
@@ -65,9 +87,6 @@ public class MenuManager : MonoBehaviour
                 islandDataList[i].tower.GetComponent<Animator>().SetTrigger("Appear");
                 islandDataList[i].data.isAlreadyAnimated = true;
                 SaveMenu.SaveIslandGameData(islandDataList[i].data);
-            } else if (islandDataList[i].data.isUnlocked && islandDataList[i].data.isAlreadyAnimated) {
-                islandDataList[i].island.SetActive(true);
-                islandDataList[i].tower.SetActive(true);
             }
         }
     }
