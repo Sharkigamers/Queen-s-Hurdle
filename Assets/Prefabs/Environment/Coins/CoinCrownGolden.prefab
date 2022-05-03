@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8063227219154505144
+--- !u!1 &2940648549985704790
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8063227219154505142}
-  - component: {fileID: 8063227219154505145}
+  - component: {fileID: 2940648549985704792}
+  - component: {fileID: 2940648549985704791}
   m_Layer: 0
   m_Name: CoinCrownGolden
   m_TagString: Untagged
@@ -17,30 +17,30 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8063227219154505142
+--- !u!4 &2940648549985704792
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8063227219154505144}
+  m_GameObject: {fileID: 2940648549985704790}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -6.98, y: 1.521, z: 2.86}
+  m_LocalScale: {x: 2.223754, y: 2.223754, z: 2.223754}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7524651939233807012}
+  - {fileID: 3406393931894713418}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &8063227219154505145
+--- !u!95 &2940648549985704791
 Animator:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8063227219154505144}
+  m_GameObject: {fileID: 2940648549985704790}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 52a6644ce7c21b0498b79dec29c8ef55, type: 2}
@@ -53,13 +53,13 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!1001 &8063227218513452367
+--- !u!1001 &2940648550622301089
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 2
-    m_TransformParent: {fileID: 8063227219154505142}
+    m_TransformParent: {fileID: 2940648549985704792}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: e64e90f913650c1429b95110ad8dd484, type: 3}
       propertyPath: m_RootOrder
@@ -128,8 +128,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: e64e90f913650c1429b95110ad8dd484, type: 3}
---- !u!4 &7524651939233807012 stripped
+--- !u!4 &3406393931894713418 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e64e90f913650c1429b95110ad8dd484, type: 3}
-  m_PrefabInstance: {fileID: 8063227218513452367}
+  m_PrefabInstance: {fileID: 2940648550622301089}
   m_PrefabAsset: {fileID: 0}
