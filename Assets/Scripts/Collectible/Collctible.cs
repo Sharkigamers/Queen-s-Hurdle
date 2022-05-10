@@ -20,6 +20,6 @@ public class Collctible : MonoBehaviour
     private IEnumerator _Animate() {
         _animator.SetTrigger("Collect");
         yield return new WaitForSeconds(delay);
-        transform.gameObject.SetActive(false);
+        Object.Destroy(this.gameObject);
     }
 }
