@@ -4,16 +4,25 @@ public class LevelSwitch : MonoBehaviour
 {
     [SerializeField]
     private string nextLevel;
+    private int? currentIndex = null;
+
     [SerializeField]
     LevelLoader levelLoader;
 
     private void OnTriggerEnter(Collider other) {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player")) {
             levelLoader.LoadSpecificLevel(nextLevel);
+            if (currentIndex.HasValue)
+                DataInterScene.currentIndexLevel = currentIndex.Value;
+        }
     }
 
     public void setNextLevelName(string newNextLevel) {
         nextLevel = newNextLevel;
+    }
+
+    public void setCurrentIndex(int newIndex) {
+        currentIndex = newIndex;
     }
 
     private void OnDrawGizmos()

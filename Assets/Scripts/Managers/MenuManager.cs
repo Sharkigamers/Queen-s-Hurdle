@@ -29,9 +29,13 @@ public class IslandData {
 public class MenuManager : MonoBehaviour
 {
     public List<IslandData> islandDataList;
+    
+    [SerializeField]
+    private DataInterScene dataInterScene;
 
     private void Awake() {
         _LoadIslandData();
+        _UpdateDataInterScene();
         _HideUnloadedIsland();
     }
 
@@ -53,6 +57,9 @@ public class MenuManager : MonoBehaviour
             islandDataList[i].tower.GetComponentInChildren<LevelSwitch>().setNextLevelName(
                 islandDataList[i].data.nextLevelName
             );
+            islandDataList[i].tower.GetComponentInChildren<LevelSwitch>().setCurrentIndex(
+                islandDataList[i].data.indexIsland + 1
+            );
         }
     }
 
@@ -66,6 +73,12 @@ public class MenuManager : MonoBehaviour
                 _setNextLevelBorderActive(i);
                 
         }
+    }
+
+    private void _UpdateDataInterScene() {
+        if (DataInterScene.currentIndexLevel < islandDataList.Count &&
+        !islandDataList[DataInterScene.currentIndexLevel].data.isUnlocked)
+            islandDataList[DataInterScene.currentIndexLevel].data.isUnlocked = true;
     }
 
     private void _setNextLevelBorderActive(int i) {
