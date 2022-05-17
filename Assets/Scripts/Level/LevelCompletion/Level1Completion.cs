@@ -18,7 +18,6 @@ public class Level1Completion : MonoBehaviour
     }
 
     private void openDoorOnLevelCompletion() {
-        print(gameManager.isLevelCompleted());
         if (gameManager.isLevelCompleted())
             levelSwitcher.SetActive(true);
     }
