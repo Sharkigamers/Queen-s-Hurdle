@@ -3,7 +3,8 @@ using UnityEngine;
 public class CharacterMovement : MonoBehaviour
 {
     Rigidbody m_Rigidbody;
-    public float m_Speed = 5f;
+    [SerializeField]
+    private float m_Speed;
     Animator m_PlayerAnimator;
     
 
@@ -13,8 +14,24 @@ public class CharacterMovement : MonoBehaviour
         m_PlayerAnimator = GetComponent<Animator>();
     }
 
+    /*
     void Update()
     {
+        Vector3 m_Input = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+
+        m_Input = m_Input.normalized * Time.deltaTime * m_Speed;
+        m_Rigidbody.MovePosition(transform.position + m_Input);
+        if (m_Input != Vector3.zero) {
+            m_PlayerAnimator.SetBool("Run", true);
+            m_Rigidbody.MoveRotation(Quaternion.LookRotation(m_Input, Vector3.up));
+        }
+        else {
+            m_PlayerAnimator.SetBool("Run", false);            
+        }
+    }
+    */
+    
+    private void FixedUpdate() {
         Vector3 m_Input = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 
         m_Input = m_Input.normalized * Time.deltaTime * m_Speed;

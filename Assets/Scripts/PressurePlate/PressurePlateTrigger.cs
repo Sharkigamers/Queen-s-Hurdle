@@ -64,7 +64,7 @@ public class PressurePlateTrigger : MonoBehaviour
     }
 
     private void MovePlateform() {
-        if (_tile.transform.position.x > -2.062999 || _tile.transform.position.x < -6.18) {
+        if (_tile.transform.position.x < 8.494 || _tile.transform.position.x > 12.606) {
             plateformSpeed = plateformSpeed * -1;
         }
         _tile.transform.Translate(Vector3.right * Time.deltaTime * plateformSpeed);
