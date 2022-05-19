@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/DialogueBoxExample.unity
+    guid: 7209a78f58281334ca3d534d9cb110c7
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 0af86dd02fda0034881ac964d6bfb3fd
   m_configObjects: {}

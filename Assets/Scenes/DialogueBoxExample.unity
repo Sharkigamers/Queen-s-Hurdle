@@ -871,13 +871,15 @@ MonoBehaviour:
   timePerCharacter: 0.05
   movingTriangle: {fileID: 744018288}
   messageArray:
-  - Hey there !
-  - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis diam ornare,
-    tempor lectus id, fermentum eros. Nunc placerat libero tortor, a placerat massa
-    sagittis sed. In a est nibh.
-  - This is a test messsage
-  - I hope this is working fine
-  - If it does, you should be able to read this
+  - Hello everyone !
+  - I, the Queen Harmony, thank you all for attending today.
+  - "If I brought you here, it\u2019s because I need a new Royal Guard\u2019s Captain."
+  - I see there are many candidates, so we decided that each one of you will have
+    to go through a set of hurdles.
+  - "The best one on those hurdles will be selected as the Royal Guard\u2019s Captain."
+  - I wish you all good luck on those, and I hope you will be able to show how strong
+    you all are.
+  sceneAfterDialogue: Menu
 --- !u!1 &2096944654
 GameObject:
   m_ObjectHideFlags: 0

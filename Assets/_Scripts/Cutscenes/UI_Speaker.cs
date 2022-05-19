@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 
@@ -12,6 +13,7 @@ public class UI_Speaker : MonoBehaviour
     [SerializeField] private GameObject movingTriangle;
     private int currentMessage = 0;
     [SerializeField] private string[] messageArray = new string[] {""};
+    [SerializeField] private string sceneAfterDialogue = "";
 
     private void Awake() {
         messageText = transform.Find("message").Find("messageText").GetComponent<TextMeshProUGUI>();
@@ -25,6 +27,8 @@ public class UI_Speaker : MonoBehaviour
                     string message = messageArray[currentMessage];
                     textWriterSingle = TextWriter.AddWriter_Static(messageText, message, timePerCharacter, true, true);
                     currentMessage++;
+                } else {
+                    SceneManager.LoadScene(sceneAfterDialogue);
                 }
             }
 
