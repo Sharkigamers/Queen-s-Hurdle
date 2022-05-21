@@ -13,6 +13,6 @@ public class PressurePlateSpawn : MonoBehaviour
     }
 
     void OnTriggerEnter(Collider col) {
-        Instantiate(_box, new Vector3(-4, 4, 0), Quaternion.identity);
+        Instantiate(_box, new Vector3(10, 4, 4), Quaternion.identity);
     }
 }
