@@ -32,10 +32,13 @@ public class MenuManager : MonoBehaviour
     
     [SerializeField]
     private DataInterScene dataInterScene;
+    [SerializeField]
+    private GameObject player;
 
     private void Awake() {
         _LoadIslandData();
         _UpdateDataInterScene();
+        player.SetActive(false);
         _HideUnloadedIsland();
     }
 
@@ -100,8 +103,11 @@ public class MenuManager : MonoBehaviour
                 islandDataList[i].tower.GetComponent<Animator>().SetTrigger("Appear");
                 islandDataList[i].data.isAlreadyAnimated = true;
                 SaveMenu.SaveIslandGameData(islandDataList[i].data);
+                yield return new WaitForSeconds(islandDataList[i].waitTowerAppearTime);
             }
         }
+        player.SetActive(true);
+        player.GetComponent<Animator>().SetTrigger("Appear");
     }
 }
 
