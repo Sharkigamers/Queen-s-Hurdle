@@ -13,6 +13,8 @@ public class PressurePlateSpawn : MonoBehaviour
     }
 
     void OnTriggerEnter(Collider col) {
-        Instantiate(_box, new Vector3(10, 4, 4), Quaternion.identity);
+        GameObject boxCp = _box;
+        boxCp.GetComponent<Rigidbody>().isKinematic = false;
+        Instantiate(boxCp, new Vector3(10, 4, 4), Quaternion.identity);
     }
 }
