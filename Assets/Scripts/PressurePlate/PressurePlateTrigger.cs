@@ -7,9 +7,11 @@ public class PressurePlateTrigger : MonoBehaviour
     MeshCollider _plateCollider;
     Transform _plateTransform;
     public GameObject _tile;
-    public float speed = 2f;
-    public float tileSpeed = 2f;
-    public float plateformSpeed = 2f;
+    public GameObject _wall;
+    public float speed = 1f;
+    public float tileSpeed = 1f;
+    public float plateformSpeed = 1f;
+    public float finishSpeed = 2.5f;
 
     void Start()
     {
@@ -27,11 +29,15 @@ public class PressurePlateTrigger : MonoBehaviour
             if (_tile.CompareTag("UpAndDown")) {
                     MoveTileUpAndDown();
                 }
-                else if (_tile.CompareTag("Spikes") || _tile.CompareTag("Tile")) {
+                else if (_tile.CompareTag("Spikes")) {
                     MoveTileDown();
                 }
                 else if (_tile.CompareTag("Platform")) {
                     MovePlateform();
+                }
+                else if (_tile.CompareTag("Finish")) {
+                    _wall.SetActive(false);
+                    MoveFinish();
                 }
         }
     }
@@ -54,5 +60,13 @@ public class PressurePlateTrigger : MonoBehaviour
             tileSpeed = tileSpeed * -1;
         }
         _tile.transform.Translate(Vector3.up * Time.deltaTime * tileSpeed);
+    }
+
+    private void MoveFinish() {
+        if (_tile.transform.position.z > -6.7) {
+            _tile.transform.Translate(Vector3.back * Time.deltaTime * finishSpeed);
+            Debug.Log(_tile.transform.position.z);
+        }
+        
     }
 }

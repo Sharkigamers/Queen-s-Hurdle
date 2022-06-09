@@ -4727,8 +4727,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.1985235, y: 2.102395, z: 2.1508079}
-  m_Center: {x: 1.3538666, y: 1.2062373, z: 1.3613927}
+  m_Size: {x: 4.1985235, y: 2.0757933, z: 2.1508079}
+  m_Center: {x: 1.3538666, y: 1.1929364, z: 1.3613927}
 --- !u!1001 &416574169
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7977,6 +7977,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _tile: {fileID: 752695340}
+  _wall: {fileID: 2063272286}
   speed: 2
   tileSpeed: 2
   plateformSpeed: 2
@@ -9128,6 +9129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _tile: {fileID: 1750560882}
+  _wall: {fileID: 2063272286}
   speed: 1
   tileSpeed: 1
   plateformSpeed: 1
@@ -13307,6 +13309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _tile: {fileID: 2076814936}
+  _wall: {fileID: 2063272286}
   speed: 2
   tileSpeed: 2
   plateformSpeed: 2
@@ -19064,6 +19067,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _tile: {fileID: 20897231}
+  _wall: {fileID: 2063272286}
   speed: 1
   tileSpeed: 1
   plateformSpeed: 1
