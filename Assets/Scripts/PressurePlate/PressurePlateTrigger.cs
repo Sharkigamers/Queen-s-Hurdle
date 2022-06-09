@@ -19,7 +19,6 @@ public class PressurePlateTrigger : MonoBehaviour
 
     void OnTriggerStay(Collider col) {
         float distance = Vector3.Distance(_plateTransform.position, col.transform.position);
-        Debug.Log("Distance" + distance);
 
         if (distance < 0.7f && !col.CompareTag("Player")) {
             Rigidbody rig = col.GetComponent<Rigidbody>();
