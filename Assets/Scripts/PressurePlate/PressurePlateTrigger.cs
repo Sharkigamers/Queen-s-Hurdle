@@ -43,7 +43,7 @@ public class PressurePlateTrigger : MonoBehaviour
     }
 
     private void MoveTileDown() {
-        if (_tile.transform.position.y > 1.125752) {
+        if (_tile.transform.position.y > 0) {
             _tile.transform.Translate(Vector3.down * Time.deltaTime * speed);
         }
     }
