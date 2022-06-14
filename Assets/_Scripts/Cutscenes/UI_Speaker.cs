@@ -14,6 +14,7 @@ public class UI_Speaker : MonoBehaviour
     private int currentMessage = 0;
     [SerializeField] private string[] messageArray = new string[] {""};
     [SerializeField] private string sceneAfterDialogue = "";
+    [SerializeField] private LevelLoader _levelLoader;
 
     private void Awake() {
         messageText = transform.Find("message").Find("messageText").GetComponent<TextMeshProUGUI>();

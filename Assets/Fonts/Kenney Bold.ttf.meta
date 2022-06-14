@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b061a5d706d6f05448b60f82fb13cf7e
+guid: e96760a718eef5646980c6a3552c2354
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Kenney Pixel
+  - Kenney Bold
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
