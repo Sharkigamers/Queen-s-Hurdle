@@ -34,9 +34,8 @@ public class Level1Manager : MonoBehaviour
     }
 
     public bool isLevelCompleted() {
-        if (coinList && coinList.transform.childCount != 0) {
+        if (coinList && coinList.transform.childCount != 0)
             return false;
-        }
         return true;
     } 
 }

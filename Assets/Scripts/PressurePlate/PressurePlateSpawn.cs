@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class PressurePlateSpawn : MonoBehaviour
 {
-    MeshCollider _plateCollider;
+    BoxCollider _plateCollider;
     public GameObject _box;
 
     void Start()
     {
-        _plateCollider = GetComponent<MeshCollider>();
+        _plateCollider = GetComponent<BoxCollider>();
     }
 
     void OnTriggerEnter(Collider col) {
-        Instantiate(_box, new Vector3(10, 4, 4), Quaternion.identity);
+            GameObject boxCp = _box;
+            boxCp.GetComponent<Rigidbody>().isKinematic = false;
+            Instantiate(boxCp, new Vector3(10, 4, 4), Quaternion.identity);
+            _plateCollider.enabled = false;
     }
 }
