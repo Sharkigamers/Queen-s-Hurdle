@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44699728, g: 0.49688947, b: 0.57505906, a: 1}
+  m_IndirectSpecularColor: {r: 0.4469986, g: 0.49689102, b: 0.5750598, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 7f266b16f892d654aa3ae3ed707eced4, type: 2}
+  m_LightingDataAsset: {fileID: 112000000, guid: d1c6f95d69507434c97a9063fc8498a3, type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: f9c50eb6e617aec44a81d49a6f869420, type: 2}
 --- !u!196 &4
 NavMeshSettings:
@@ -4818,7 +4818,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7dff8d25bac64f4d98a25067e1a6099, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneAfterMenu: DialogueBoxExample
+  sceneAfterMenu: StartingMenu
 --- !u!4 &374481276
 Transform:
   m_ObjectHideFlags: 0
@@ -11842,7 +11842,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: QUEEN'S HURDLE
+  m_text: Victory !
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3ea792b5349e7014193428e2533d836f, type: 2}
   m_sharedMaterial: {fileID: -2844636396105189170, guid: 3ea792b5349e7014193428e2533d836f, type: 2}
@@ -15768,7 +15768,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Click to Start
+  m_text: Click to quit
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3ea792b5349e7014193428e2533d836f, type: 2}
   m_sharedMaterial: {fileID: -2844636396105189170, guid: 3ea792b5349e7014193428e2533d836f, type: 2}
@@ -15803,7 +15803,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 1
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 1024
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -15831,7 +15831,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 444.58673, z: 0, w: 244.32251}
+  m_margin: {x: 0, y: -250.40234, z: 0, w: 365.0412}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -26470,7 +26470,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 179f2566b15347942bc69e86b32f1fe0, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 1d9043502c252b24298d42e7677027b8, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
